@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #e8f5e9;
+}
+
+header {
+    background: linear-gradient(to right, #0288d1, #81d4fa);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+.regles {
+    background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    padding: 3rem;
+    text-align: center;
+    min-height: calc(100vh - 200px);
+    position: relative;
+}
+
+.regles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 125, 50, 0.3); /* Overlay léger */
+}
+
+.regles h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.regles ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.regles li {
+    font: 1.3rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 1rem 2.5rem;
+    background: rgba(0, 0, 0, 0.7); /* Boîte sombre pour lisibilité */
+    border-radius: 8px;
+    position: relative;
+}
+
+.regles li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0.8rem;
+    top: 1rem;
+    font-size: 1.2rem;
+}
+
+footer {
+    background: #0288d1;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .regles {
+        padding: 2rem;
+    }
+
+    .regles h2 {
+        font-size: 2rem;
+    }
+
+    .regles li {
+        font-size: 1.1rem;
+        padding: 0.8rem 0.8rem 0.8rem 2rem;
+    }
+}

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(to right, #01579b, #4fc3f7);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background: #ffeb3b;
+    color: #01579b;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.equipe {
+    background: url('https://images.unsplash.com/photo-1561214078-f3240683c7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    padding: 3rem;
+    text-align: center;
+    min-height: calc(100vh - 200px);
+    position: relative;
+}
+
+.equipe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.equipe h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.equipe p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.equipe h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffeb3b;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.equipe-membre {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.equipe-membre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.equipe-membre a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.equipe-membre img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.equipe-membre a:hover img {
+    transform: scale(1.1);
+}
+
+.equipe-membre.ombre img {
+    border-color: #6a1b9a;
+}
+
+.equipe-membre.lumiere img {
+    border-color: #ffd700;
+}
+
+.equipe-membre.feu img {
+    border-color: #e74c3c;
+}
+
+.equipe-membre.magie img {
+    border-color: #8e24aa;
+}
+
+.equipe-membre.air img {
+    border-color: #b0bec5;
+}
+
+.equipe-membre h3 {
+    font-size: 1.6rem;
+    color: #ffeb3b;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.equipe-membre a:hover h3 {
+    color: #fff;
+}
+
+.equipe-membre .role {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.equipe-membre p {
+    font-size: 1.1rem;
+    background: none;
+    padding: 0;
+}
+
+.equipe a:not(.equipe-membre a) {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.equipe a:not(.equipe-membre a):hover {
+    color: #fff;
+}
+
+footer {
+    background: #01579b;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        max-height: 500px;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .equipe {
+        padding: 2rem;
+    }
+
+    .equipe h2 {
+        font-size: 2rem;
+    }
+
+    .equipe p {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .equipe-membre img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .equipe-membre h3 {
+        font-size: 1.4rem;
+    }
+
+    .equipe-membre .role {
+        font-size: 1rem;
+    }
+
+    .equipe-membre p {
+        font-size: 1rem;
+    }
+}
